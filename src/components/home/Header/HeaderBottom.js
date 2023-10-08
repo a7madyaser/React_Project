@@ -96,7 +96,7 @@ const HeaderBottom = () => {
                     <div
                       onClick={() =>
                         navigate(
-                          `/product/${item.productName
+                          `/product/JD{item.productName
                             .toLowerCase()
                             .split(" ")
                             .join("")}`,
@@ -118,12 +118,12 @@ const HeaderBottom = () => {
                           {item.productName}
                         </p>
                         <p className="text-xs">{item.des}</p>
-                        <p className="text-sm">
+                        {/* <p className="text-sm">
                           Price:{" "}
                           <span className="text-primeColor font-semibold">
-                            ${item.price}
+                            JD{item.price}
                           </span>
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   ))}

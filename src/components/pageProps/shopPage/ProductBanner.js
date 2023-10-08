@@ -29,7 +29,7 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
 
       <div className="flex items-center gap-4">
         <span
-          className={`${
+          className={`JD{
             girdViewActive
               ? "bg-primeColor text-white"
               : "border-[1px] border-gray-300 text-[#737373]"
@@ -38,7 +38,7 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
           <BsGridFill />
         </span>
         <span
-          className={`${
+          className={`JD{
             listViewActive
               ? "bg-primeColor text-white"
               : "border-[1px] border-gray-300 text-[#737373]"
