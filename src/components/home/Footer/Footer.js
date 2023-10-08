@@ -34,21 +34,11 @@ const Footer = () => {
           <FooterListTitle title=" More about Stylex Shop" />
           <div className="flex flex-col gap-6">
             <p className="text-base w-full xl:w-[80%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint
-              ab ullam, numquam nesciunt in.
+            What distinguishes our marketing sites is that it provides a variety of categories and products that can be found, starting from clothing and accessories. It also allows buyers to access global products without having to travel or search for them elsewhere.
             </p>
             <ul className="flex items-center gap-2">
               <a
-                href="https://www.youtube.com/@reactjsBD"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaYoutube />
-                </li>
-              </a>
-              <a
-                href="https://github.com/noorjsdivs"
+                href="https://github.com/a7madyaser/React_Project"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -57,21 +47,12 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://www.facebook.com/Noorlalu143/"
+                href="https://www.facebook.com/maheer360"
                 target="_blank"
                 rel="noreferrer"
               >
                 <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
                   <FaFacebook />
-                </li>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaLinkedin />
                 </li>
               </a>
             </ul>
