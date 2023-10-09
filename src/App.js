@@ -22,6 +22,11 @@ import Offer from "./pages/Offer/Offer";
 import Payment from "./pages/payment/Payment";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Shop from "./pages/Shop/Shop";
+import Bags from "./pages/category/bags";
+import Clothes from "./pages/category/clothes";
+import Accessories from "./pages/category/accessories";
+import Homeappliances from "./pages/category/homeappliances";
+
 
 const Layout = () => {
   return (
@@ -54,6 +59,10 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
+      <Route path="/category/bags" element={<Bags />}></Route>
+      <Route path="/category/clothes" element={<Clothes />}></Route>
+      <Route path="/category/accessories" element={<Accessories />}></Route>
+      <Route path="/category/homeappliances" element={<Homeappliances />}></Route>
     </Route>
   )
 );
