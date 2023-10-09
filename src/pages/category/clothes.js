@@ -6,9 +6,10 @@ import ProductBanner from "../../components/pageProps/shopPage/ProductBanner";
 import ShopSideNav from "../../components/pageProps/shopPage/ShopSideNav";
 import Header from "../../components/home/Header/Header";
 import Footer from "../../components/home/Footer/Footer";
+import HeaderBottom from "../../components/home/Header/HeaderBottom";
 
 
-const clothes = () => {
+const Clothes = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -28,9 +29,15 @@ console.log(items);
     <div>
 
       <Header/>
-    <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Clothes" />
-      <div className="card-list">
+      <HeaderBottom />
+      <div className="max-w-container mx-auto px-4">
+  <Breadcrumbs title="Clothes" />
+  <div className="w-full h-full flex pb-20 gap-10">
+    <div className="w-[20%] lgl:w-[25%] hidden mdl:inline-flex h-full">
+      <ShopSideNav />
+    </div>
+    <div className="w-full mdl:w-[80%] lgl:w-[75%] h-full flex flex-col gap-10">
+      <div className="flex flex-wrap"> {/* Added flex-wrap here */}
         {items.map((item, index) => (
           <div key={index} className="card" style={{ width: "18rem" }}>
             <img src={'/'+item.photo} className="card-img-top" alt="Card Image" />
@@ -45,12 +52,15 @@ console.log(items);
           </div>
         ))}
       </div>
-      <Pagination />
     </div>
+  </div>
+  <Pagination />
+</div>
+
     <Footer/>
 
     </div>
   );
 };
 
-export default clothes;
+export default Clothes;
