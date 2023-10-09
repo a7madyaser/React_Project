@@ -7,10 +7,13 @@ import ShopSideNav from "../../components/pageProps/shopPage/ShopSideNav";
 import Header from "../../components/home/Header/Header";
 import Footer from "../../components/home/Footer/Footer";
 import HeaderBottom from "../../components/home/Header/HeaderBottom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/orebiSlice";
 
 
 const Homeappliances = () => {
   const [items, setItems] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // Use axios to fetch data from your API
@@ -36,17 +39,30 @@ console.log(items);
           <div className="w-[20%] lgl:w-[25%] hidden mdl:inline-flex h-full">
           <ShopSideNav />
           </div>
-          <div className="w-full mdl:w-[80%] lgl:w-[75%] h-full flex flex-col gap-10">
+          <div className="w-full mdl:w-[80%] lgl:w-[75%] h-full flex flex-wrap gap-10">
         {items.map((item, index) => (
-          <div key={index} className="card" style={{ width: "18rem" }}>
-            <img src={'/'+item.photo} className="card-img-top" alt="Card Image" />
+          <div key={index} className="card" style={{ width: "18rem", height: "100px",marginBottom:"30%" }}>
+            <img src={'/'+item.photo} className="card-img-top" alt="Card Image" style={{width:"100%",height:"200px"}}/>
             <div className="card-body">
-              <h5 className="card-title">{item.name}</h5>
+              <h5 className="card-title"><b>{item.name}</b></h5>
               <p className="card-text">{item.details}</p>
-              <p className="card-text">{item.price}</p>
-              <a href="#" className="btn btn-primary">
-                Add to Cart
-              </a>
+              <p className="card-text">JD{item.price}</p>
+              <button
+                    onClick={() =>
+                      dispatch(
+                        addToCart({
+                          _id: item.id,
+                          name: item.name,
+                          quantity: 1,
+                          image: item.img,
+                          price: item.price,
+                        })
+                      )
+                    }
+                    className="w-full py-4 bg-primeColor hover:bg-black duration-300 text-white text-lg font-titleFont"
+                  >
+                    Add to Cart
+                  </button>
             </div>
           </div>
         ))}

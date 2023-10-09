@@ -39,12 +39,12 @@ const Bags = () => {
           </div>
           <div className="w-full mdl:w-[80%] lgl:w-[75%] h-full flex flex-wrap gap-10"> {/* Added flex-wrap here */}
             {items.map((item, index) => (
-              <div key={index} className="card" style={{ width: "18rem", height: "100px" }}>
-                <img src={'/' + item.photo} className="card-img-top" alt="Card Image" />
+              <div key={index} className="card" style={{ width: "18rem", height: "100px",marginBottom:"30%" }}>
+                <img src={'/' + item.photo} className="card-img-top" alt="Card Image" style={{width:"100%",height:"200px"}} />
                 <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
+                  <h5 className="card-title"><b>{item.name}</b></h5>
                   <p className="card-text">{item.details}</p>
-                  <p className="card-text">{item.price}</p>
+                  <p className="card-text">JD{item.price}</p>
                   <button
                     onClick={() =>
                       dispatch(
